@@ -1,0 +1,21 @@
+# build output
+dist/
+# generated types & cache
+.astro/
+# deps
+node_modules/
+# env & logs
+.env
+.env.production
+npm-debug.log*
+pnpm-debug.log*
+# os
+.DS_Store
+# stray package-manager temp artifacts
+_tmp_*
+
+# 교안 원본 폴더(약 22MB, 미사용 이미지 다수) — 슬림 사본 deck-problem-definition/ 만 배포
+public/uploads/ProblemDefinition/
+
+# 강사용 교안 deck — 빌더 포폴 배포에서 제외(로컬 파일은 유지)
+public/uploads/deck-problem-definition/

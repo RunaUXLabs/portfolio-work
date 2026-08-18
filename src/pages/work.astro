@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/pages/work.css';
+const base = import.meta.env.BASE_URL;
+---
+<Base
+  title="Work — 직접 만든 프로덕트 | Runa UX Labs"
+  description="강의와 병행해 직접 기획·디자인·개발한 프로덕트. MD to Figma 플러그인, modu 토스 챌린지 프로토타입."
+  current="work"
+>
+  <div class="wrap">
+    <header class="page-header">
+      <span class="kicker">Work</span>
+      <h1 class="page-title">Work</h1>
+      <p class="page-sub">문제 정의부터 로직 설계·구현·배포까지 직접 만든 프로덕트들.</p>
+    </header>
+
+    <hr class="rule" />
+
+    <div class="work-grid">
+      <a href={`${base}case-mdtofigma`} class="case-card">
+        <img class="thumb" src={`${base}uploads/thumb-mdtofigma.png`} alt="MD to Figma 커버" loading="lazy" />
+        <span class="ck">Product · Figma Plugin</span>
+        <h2 class="ct">MD to Figma</h2>
+        <p class="cb">마크다운 ⇄ Figma 양방향 동기화 엔진. 실제 설치·사용 가능한 Figma 커뮤니티 배포 플러그인.</p>
+        <div class="tags">
+          <span class="tag tag-accent">Figma 커뮤니티 배포</span>
+          <span class="tag tag-neutral">GitHub</span>
+          <span class="tag tag-neutral">MIT</span>
+        </div>
+      </a>
+      <a href={`${base}case-modu`} class="case-card">
+        <img class="thumb" src={`${base}uploads/thumb-modu.png`} alt="modu · 모두의 시간 커버" loading="lazy" />
+        <span class="ck">Product · React Prototype</span>
+        <h2 class="ct">modu · 모두의 시간</h2>
+        <p class="cb">'침묵=동의' 상태머신으로 회의 확정 로직을 설계한 토스 2026 챌린지 제출작. React·Vite 구현, GitHub Actions 배포.</p>
+        <div class="tags">
+          <span class="tag tag-accent">토스 챌린지</span>
+          <span class="tag tag-neutral">GitHub</span>
+          <span class="tag tag-neutral">라이브 데모</span>
+        </div>
+      </a>
+    </div>
+
+    <hr class="rule" />
+
+    <section class="field-projects">
+      <span class="kicker">현업 프로젝트 · 2013–2019</span>
+      <h2 class="fp-title">대형 B2B/B2G 시스템 화면설계</h2>
+      <p class="fp-intro">(주)아이넷테크 개발1팀에서 KT 통신망·소방 재난 시스템 등 23개 프로젝트의 화면 UX/UI 기획·디자인·퍼블리싱을 담당했습니다. <br>비주얼 중심 화면 구현보다 복잡한 시스템의 흐름과 상태를 정리하는 일이었습니다. <span class="fp-src">— 한국소프트웨어산업협회 경력증명 기준</span></p>
+
+      <div class="fp-cols">
+        <div class="fp-group">
+          <h3>KT · 통신망 / SDN · 접속제어 <span>14</span></h3>
+          <ul class="fp-list">
+            <li><span class="fp-name">IP코어 업무 자동화 IP Core-SDN 개발</span><span class="fp-year">2018</span></li>
+            <li><span class="fp-name">Cross-Domain 자동화 Infra Manager 개발</span><span class="fp-year">2018</span></li>
+            <li><span class="fp-name">유선인터넷 접속제어 플랫폼 기능 개선</span><span class="fp-year">2016</span></li>
+            <li><span class="fp-name">IP-SDN 통합운용솔루션 구현</span><span class="fp-year">2015</span></li>
+            <li><span class="fp-name">VPN 서비스 확대 CNM 기능 구현</span><span class="fp-year">2015</span></li>
+            <li><span class="fp-name">olleh Biz Secure IP DHCP 기능 구현</span><span class="fp-year">2015</span></li>
+            <li><span class="fp-name">인터넷 미납안내 POP-UP 유선접속제어 플랫폼</span><span class="fp-year">2015</span></li>
+            <li><span class="fp-name">GiGA 인터넷 QoS 제어 인프라 UACS</span><span class="fp-year">2014</span></li>
+            <li><span class="fp-name">IPv6 기반 Edge 제어 플랫폼 구현</span><span class="fp-year">2014</span></li>
+            <li><span class="fp-name">vBRAS Controller 구현</span><span class="fp-year">2014</span></li>
+            <li><span class="fp-name">유선접속인증 체계 개선 플랫폼</span><span class="fp-year">2013</span></li>
+            <li><span class="fp-name">신인증 웹서버 고도화</span><span class="fp-year">2013</span></li>
+            <li><span class="fp-name">스마트네트워크시스템 EMS 구현</span><span class="fp-year">2013</span></li>
+            <li><span class="fp-name">스마트네트워크시스템 Phase II 접속제어플랫폼</span><span class="fp-year">2013</span></li>
+          </ul>
+        </div>
+
+        <div class="fp-group">
+          <h3>소방 · 재난 GIS / 영상전송 <span>9</span></h3>
+          <ul class="fp-list">
+            <li><span class="fp-name">119활동정보 지원시스템 구축 · 노후장비 교체</span><span class="fp-year">2018</span></li>
+            <li><span class="fp-name">긴급구조표준시스템 고도화 GIS 시스템</span><span class="fp-year">2017</span></li>
+            <li><span class="fp-name">무선환경개선 · 긴급구조표준시스템 보강</span><span class="fp-year">2017</span></li>
+            <li><span class="fp-name">긴급구조표준시스템 보강</span><span class="fp-year">2016</span></li>
+            <li><span class="fp-name">소방인사서버 분리구축</span><span class="fp-year">2016</span></li>
+            <li><span class="fp-name">부산소방안전본부 재난현장영상 전송시스템</span><span class="fp-year">2016</span></li>
+            <li><span class="fp-name">재난영상전송시스템 구축</span><span class="fp-year">2016</span></li>
+            <li><span class="fp-name">긴급구조표준시스템 보강 · 119종합상황실 구축</span><span class="fp-year">2015</span></li>
+            <li><span class="fp-name">충청남도 소방본부 긴급구조 GIS 프로그램 개발</span><span class="fp-year">2014</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <Footer />
+  </div>
+</Base>

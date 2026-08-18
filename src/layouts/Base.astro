@@ -1,0 +1,56 @@
+---
+import '../styles/site.css';
+import Nav from '../components/Nav.astro';
+
+const { title, description, current } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="stylesheet" href={`${base}_ds/nocturne/styles.css`} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+  </head>
+  <body>
+    <Nav current={current} />
+    <slot />
+    <script>
+      document.addEventListener('click', (e) => {
+        const link = (e.target as HTMLElement).closest('a[href^="mailto:"]');
+        if (!(link instanceof HTMLAnchorElement)) return;
+        e.preventDefault();
+
+        const email = link.href.replace(/^mailto:/, '').split('?')[0];
+
+        const showTip = (text: string) => {
+          const tip = document.createElement('span');
+          tip.className = 'copy-tip';
+          tip.setAttribute('role', 'status');
+          tip.textContent = text;
+          link.appendChild(tip);
+          requestAnimationFrame(() => tip.classList.add('show'));
+          setTimeout(() => {
+            tip.classList.remove('show');
+            setTimeout(() => tip.remove(), 200);
+          }, 1400);
+        };
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(
+            () => showTip('이메일이 복사되었습니다'),
+            () => { window.location.href = link.href; }
+          );
+        } else {
+          window.location.href = link.href;
+        }
+      });
+    </script>
+  </body>
+</html>

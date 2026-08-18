@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/pages/case-detail.css';
+const base = import.meta.env.BASE_URL;
+---
+<Base
+  title="MD to Figma — 마크다운 ⇄ Figma 디자인 시스템 엔진 | Runa UX Labs"
+  description="디자인 시스템 전체를 Markdown과 Figma 사이에서 양방향 동기화하는 Figma 플러그인. 기획·디자인·개발 1인 수행."
+  current="work"
+>
+  <div class="wrap">
+    <header class="case-header">
+      <a href={`${base}work`} class="back-link">← Work</a>
+      <span class="kicker">Product · Figma Plugin</span>
+      <h1 class="case-title">MD to Figma</h1>
+      <p class="case-overview">마크다운 ⇄ Figma 양방향 디자인 시스템 엔진 — 변수·스타일·데이터 추출을 한 번에. 디자인 시스템 전체를 Markdown과 Figma 사이에서 동기화하는 Figma 플러그인.</p>
+      <div class="meta-row">
+        <div class="meta-item">
+          <span class="meta-label">역할</span>
+          <span class="meta-val">기획·디자인·개발 1인 수행</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">스택</span>
+          <span class="meta-val">Figma Plugin API, ES6 JavaScript</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">버전</span>
+          <span class="meta-val">v2.0.2 · MIT License</span>
+        </div>
+      </div>
+      <div class="link-row">
+        <a href="https://github.com/RunaUXLabs/md-to-figma" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.figma.com/community/plugin/1631661911083855755" class="btn btn-secondary" target="_blank" rel="noopener">Figma 커뮤니티</a>
+      </div>
+    </header>
+
+    <hr class="rule" />
+
+    <section class="section">
+      <h2>왜 만들었나</h2>
+      <ul>
+        <li><strong>AI 워크플로우 최적화:</strong> AI가 생성한 DESIGN.md를 MCP 토큰 낭비 없이 Figma에 즉시 이식</li>
+        <li><strong>양방향 동기화:</strong> MD→Figma 생성과 Figma→MD 추출을 하나의 플러그인으로</li>
+        <li><strong>시멘틱 디자인:</strong> 폰트가 없어도 '디자인 의도'를 변수에 영구 보존</li>
+      </ul>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="section">
+      <h2>핵심 기능</h2>
+      <ul>
+        <li><strong>양방향 엔진:</strong> MD→Figma 생성 / Figma→MD 추출·자동 복구</li>
+        <li><strong>시멘틱 타이포그래피 아키텍처:</strong> 의도 vs 구현 분리, 폴백 폰트 자동 바인딩</li>
+        <li><strong>스마트 싱크 &amp; Fuzzy Matching:</strong> 기존 컬렉션 구조 파괴 없이 값만 업데이트</li>
+        <li><strong>AI-Ready QA 리포트:</strong> 디자인 시스템 품질 검증 자동화</li>
+      </ul>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="section">
+      <h2>Visual</h2>
+      <img class="visual" src={`${base}uploads/thumb-mdtofigma.png`} alt="MD to Figma 커버" loading="lazy" />
+    </section>
+
+    <hr class="rule" />
+
+    <Footer />
+  </div>
+</Base>

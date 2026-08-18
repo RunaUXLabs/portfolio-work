@@ -1,0 +1,16 @@
+---
+const { current } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const items = [
+  { href: base, label: 'Home', key: 'home' },
+  { href: `${base}about`, label: 'About', key: 'about' },
+  { href: `${base}work`, label: 'Work', key: 'work' },
+];
+---
+<nav class="nav">
+  <span class="nav-brand">RunaUXLabs</span>
+  {items.map((it) => (
+    <a href={it.href} aria-current={current === it.key ? 'page' : undefined}>{it.label}</a>
+  ))}
+  <a href="mailto:runa.uxlabs@gmail.com" class="btn btn-primary">Contact</a>
+</nav>
