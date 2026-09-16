@@ -1,16 +1,84 @@
 /* Case 상세 페이지 공용 스타일 — case-modu, case-mdtofigma 공유 */
-.case-header { padding: calc(4 * var(--leading)) 0 calc(2 * var(--leading)); }
-.case-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(32px, 4.5vw, 56px); line-height: 1.12; letter-spacing: -0.02em; margin: 0; }
-.case-overview { font-size: 17px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: var(--leading) 0 0; max-width: var(--measure); }
-.meta-row { display: flex; gap: calc(2 * var(--leading)); flex-wrap: wrap; margin-top: var(--leading); }
-.meta-item { display: flex; flex-direction: column; gap: 4px; }
-.meta-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); }
-.meta-val { font-size: 14px; color: color-mix(in srgb, var(--color-text) 80%, transparent); }
-.link-row { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--leading); }
-.section { padding: calc(2.5 * var(--leading)) 0; }
-.section h2 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 24px; letter-spacing: -0.01em; margin: 0 0 var(--leading); }
-.section p { font-size: 15px; line-height: var(--leading); color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 0 0 var(--half); max-width: var(--measure); }
-.section ul { padding-left: 20px; margin: var(--half) 0 0; }
-.section li { font-size: 14px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin-bottom: 6px; }
-.section li strong { color: var(--color-text); font-weight: 500; }
-.visual { width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); margin-top: var(--leading); display: block; }
+.case-header {
+  padding: calc(4 * var(--leading)) 0 calc(2 * var(--leading));
+}
+.case-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.case-overview {
+  font-size: 17px;
+  line-height: var(--leading);
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  margin: var(--leading) 0 0;
+  max-width: var(--measure);
+}
+.meta-row {
+  display: flex;
+  gap: calc(2 * var(--leading));
+  flex-wrap: wrap;
+  margin-top: var(--leading);
+}
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.meta-val {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+.link-row {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--leading);
+}
+.section {
+  padding: calc(2.5 * var(--leading)) 0;
+}
+.section h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--leading);
+}
+.section p {
+  font-size: 15px;
+  line-height: var(--leading);
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  margin: 0 0 var(--half);
+  max-width: var(--measure);
+}
+.section ul {
+  padding-left: 20px;
+  margin: var(--half) 0 0;
+}
+.section li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  margin-bottom: 6px;
+}
+.section li strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+.visual {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--leading);
+  display: block;
+}

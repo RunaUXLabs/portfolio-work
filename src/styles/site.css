@@ -3,7 +3,7 @@
   --leading: 28px;
   --half: 14px;
   --edge: clamp(20px, 5vw, 72px);
-  --measure: 58ch;
+  --measure: 57ch;
 }
 html {
   scroll-behavior: smooth;

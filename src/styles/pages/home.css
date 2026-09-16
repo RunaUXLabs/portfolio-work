@@ -135,6 +135,11 @@
   gap: clamp(16px, 2.5vw, 28px);
   margin-top: calc(var(--leading) + var(--half));
 }
+.case-card--feature {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent-900) 58%, transparent), transparent 58%),
+    var(--color-surface);
+}
 .case-card {
   display: flex;
   flex-direction: column;
@@ -169,6 +174,7 @@
   font-size: 18px;
   line-height: 1.3;
   margin: 0;
+  text-wrap: balance;
 }
 .case-card .card-body {
   font-size: 13px;
@@ -206,6 +212,7 @@
   line-height: 1.65;
   color: color-mix(in srgb, var(--color-text) 78%, transparent);
   margin: 0;
+  word-break: keep-all;
 }
 @media (max-width: 720px) {
   .skill-grid {
@@ -230,6 +237,8 @@
   color: color-mix(in srgb, var(--color-text) 72%, transparent);
   /* max-width: var(--measure); */
   margin: 0 0 var(--leading);
+  max-width: 78ch;
+  word-break: keep-all;
 }
 .footer-inner--full {
   align-items: flex-start;

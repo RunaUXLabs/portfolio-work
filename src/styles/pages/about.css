@@ -40,6 +40,57 @@
   max-width: 70ch;
   word-break: keep-all;
 }
+.designer-axis {
+  padding: calc(2.5 * var(--leading)) 0;
+}
+.axis-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 1px;
+  margin-top: calc(var(--leading) + var(--half));
+  background: color-mix(in srgb, var(--color-text) 9%, transparent);
+  box-shadow: var(--shadow-sm);
+}
+.axis-main,
+.axis-side {
+  min-height: 220px;
+  padding: clamp(18px, 2.4vw, 30px);
+  background: color-mix(in srgb, var(--color-surface) 88%, var(--color-bg));
+}
+.axis-main {
+  background:
+    radial-gradient(520px 300px at 20% 0%, color-mix(in srgb, var(--color-accent-900) 65%, transparent), transparent 72%),
+    color-mix(in srgb, var(--color-surface) 88%, var(--color-bg));
+}
+.axis-label {
+  margin: 0 0 var(--leading);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.axis-main h2,
+.axis-side h3 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--half);
+}
+.axis-main h2 {
+  font-size: clamp(26px, 3vw, 38px);
+}
+.axis-side h3 {
+  font-size: 20px;
+}
+.axis-main p:not(.axis-label),
+.axis-side p:not(.axis-label) {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--color-text) 74%, transparent);
+  word-break: keep-all;
+}
 .timeline-section {
   padding: calc(3 * var(--leading)) 0 calc(2.5 * var(--leading));
 }
@@ -154,6 +205,13 @@
   }
   .narrative .photo-col {
     max-width: 280px;
+  }
+  .axis-grid {
+    grid-template-columns: 1fr;
+  }
+  .axis-main,
+  .axis-side {
+    min-height: auto;
   }
 }
 @media (max-width: 720px) {
