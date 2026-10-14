@@ -6,16 +6,20 @@ const base = import.meta.env.BASE_URL;
 ---
 <Base
   title="MD to Figma — 마크다운 ⇄ Figma 디자인 시스템 엔진 | Runa UX Labs"
-  description="디자인 시스템 전체를 Markdown과 Figma 사이에서 양방향 동기화하는 Figma 플러그인."
+  description="디자인 시스템 문서를 Figma 변수·스타일·오브젝트로 옮기고 다시 추출하는 Figma 플러그인. 문서와 화면 제작 사이의 반복 작업을 줄이기 위해 만들었습니다."
   current="work"
 >
   <div class="wrap">
     <header class="case-header">
       <a href={`${base}work`} class="back-link">← Work</a>
-      <span class="kicker">Product · Figma Plugin</span>
+      <span class="kicker">Figma Plugin · System Tool</span>
       <h1 class="case-title">MD to Figma</h1>
-      <p class="case-overview">마크다운 ⇄ Figma 양방향 디자인 시스템 엔진 — 변수·스타일·데이터 이식과추출을 한 번에. 디자인 시스템에 사용되는 토큰을 Markdown과 Figma 사이에서 동기화하는 Figma 플러그인.</p>
+      <p class="case-overview">디자인 시스템 문서를 Figma 작업으로 옮기는 반복을 줄이기 위해 만든 플러그인입니다. Markdown에 정리된 화면 규칙을 Figma 변수·스타일·오브젝트로 생성하고, Figma에서 다시 Markdown으로 추출할 수 있게 설계했습니다.</p>
       <div class="meta-row">
+        <div class="meta-item">
+          <span class="meta-label">역할</span>
+          <span class="meta-val">문제 정의 · 플러그인 UI · 동기화 로직 · 배포</span>
+        </div>
         <div class="meta-item">
           <span class="meta-label">버전</span>
           <span class="meta-val">v2.0.2 · MIT License</span>
@@ -29,24 +33,38 @@ const base = import.meta.env.BASE_URL;
 
     <hr class="rule" />
 
+    <section class="case-brief" aria-label="프로젝트 요약">
+      <div class="brief-block">
+        <span>문제</span>
+        <p>디자인 시스템 문서는 잘 정리되어도 실제 Figma 파일에는 다시 수작업으로 옮겨야 했습니다. 문서와 화면 제작이 분리되면 기준은 금방 어긋나고, 같은 판단을 여러 번 반복하게 됩니다.</p>
+      </div>
+      <div class="brief-block">
+        <span>판단</span>
+        <p>Markdown을 단순 설명 문서가 아니라 Figma 변수를 만들 수 있는 구조화된 입력으로 다뤘습니다. 문서의 의미를 잃지 않으면서 Figma의 스타일·변수 체계로 옮기는 쪽에 초점을 맞췄습니다.</p>
+      </div>
+      <div class="brief-block">
+        <span>구현과 공개</span>
+        <p>MD→Figma 생성, Figma→MD 추출, 기존 컬렉션 업데이트, Figma Community 공개, GitHub 배포까지 직접 연결했습니다.</p>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
     <section class="section">
-      <h2>왜 만들었나</h2>
+      <h2>설계한 구조</h2>
       <ul>
-        <li><strong>AI 워크플로우 최적화:</strong> AI가 생성한 DESIGN.md를 MCP 토큰 낭비 없이 Figma에 즉시 이식</li>
-        <li><strong>양방향 동기화:</strong> MD→Figma 생성과 Figma→MD 추출을 하나의 플러그인으로</li>
+        <li><strong>양방향 엔진:</strong> Markdown에서 Figma를 생성하고, Figma에서 다시 Markdown을 추출합니다.</li>
+        <li><strong>시멘틱 타이포그래피:</strong> 폰트 이름보다 제목, 본문, 캡션처럼 사용 의도를 보존하는 구조로 다뤘습니다.</li>
+        <li><strong>스마트 싱크:</strong> 기존 컬렉션 구조를 지우지 않고 필요한 값만 찾아 업데이트하도록 설계했습니다.</li>
+        <li><strong>검증 리포트:</strong> 가져온 규칙이 누락되거나 깨지는 지점을 확인할 수 있게 QA 흐름을 넣었습니다.</li>
       </ul>
     </section>
 
     <hr class="rule" />
 
     <section class="section">
-      <h2>핵심 기능</h2>
-      <ul>
-        <li><strong>양방향 엔진:</strong> MD→Figma 생성 / Figma→MD 추출·자동 복구</li>
-        <li><strong>시멘틱 타이포그래피 아키텍처:</strong> 의도 vs 구현 분리, 폴백 폰트 자동 바인딩</li>
-        <li><strong>스마트 싱크 &amp; Fuzzy Matching:</strong> 기존 컬렉션 구조 파괴 없이 값만 업데이트</li>
-        <li><strong>AI-Ready QA 리포트:</strong> 디자인 시스템 품질 검증 자동화</li>
-      </ul>
+      <h2>이 작업이 보여주는 것</h2>
+      <p>이 프로젝트는 플러그인 자체보다, 반복되는 디자인 판단을 도구로 바꾸는 방식에 가깝습니다. 화면 규칙을 문서로만 남기지 않고 실제 작업 환경으로 옮기며, 다시 추출해 검토할 수 있는 흐름을 만들었습니다.</p>
     </section>
 
     <hr class="rule" />

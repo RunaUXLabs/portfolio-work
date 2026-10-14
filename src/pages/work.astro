@@ -41,30 +41,33 @@ const base = import.meta.env.BASE_URL;
 
     <hr class="rule" />
 
-    <section class="fit-section" aria-label="교육기간동안 배포 관리한 프로젝트">
+    <section class="project-section" aria-label="2026년에 직접 설계하고 배포한 프로젝트">
       <span class="kicker">배포 프로젝트 · 2026</span>
-      <div class="work-grid">
-        <a href={`${base}case-mdtofigma`} class="case-card">
-          <img class="thumb" src={`${base}uploads/thumb-mdtofigma.png`} alt="MD to Figma 커버" loading="lazy" />
-          <span class="ck">Figma Plugin · System Tool</span>
-          <h2 class="ct">MD to Figma</h2>
-          <p class="cb">문서에 남은 화면 규칙을 Figma 변수·스타일·오브젝트로 옮기고 다시 추출하는 양방향 플러그인. 실제 설치·사용 가능한 Figma 커뮤니티 배포 결과물입니다.</p>
-          <div class="tags">
-            <span class="tag tag-accent">Figma 커뮤니티 배포</span>
-            <span class="tag tag-neutral">Design System</span>
-            <span class="tag tag-neutral">Plugin UI</span>
-          </div>
+      <div class="project-intro">
+        <h2>화면을 설계하는 데서 멈추지 않고, 규칙을 만들고 직접 구현해 실제로 작동하는지 확인한 작업들입니다.</h2>
+        <p>문서와 Figma를 연결하는 도구부터 일정 조율 서비스까지, 작업 중 마주한 문제를 직접 만들며 풀었습니다.</p>
+      </div>
+
+      <div class="project-brief-grid">
+        <a href={`${base}case-mdtofigma`} class="project-brief">
+          <span class="brief-kicker">Figma Plugin · System Tool</span>
+          <h3>MD to Figma</h3>
+          <p class="brief-summary">문서에 정리한 디자인 규칙을 Figma 변수와 스타일로 옮기고, 다시 문서로 꺼내는 플러그인입니다. 같은 내용을 반복해서 입력하는 수고를 줄였습니다.</p>
+          <span class="brief-link">프로젝트 보기 <span aria-hidden="true">→</span></span>
         </a>
-        <a href={`${base}case-modu`} class="case-card">
-          <img class="thumb" src={`${base}uploads/thumb-modu.png`} alt="modu · 모두의 시간 커버" loading="lazy" />
-          <span class="ck">Logic · React Prototype</span>
-          <h2 class="ct">Mod U · 모두의 시간</h2>
-          <p class="cb">'침묵=동의' 규칙을 바탕으로 응답, 이의, 확정, 예외 폴백의 흐름을 설계한 동작 프로토타입. React·Vite 구현, GitHub Actions 배포.</p>
-          <div class="tags">
-            <span class="tag tag-accent">Interaction Logic</span>
-            <span class="tag tag-neutral">State Machine</span>
-            <span class="tag tag-neutral">라이브 데모</span>
-          </div>
+
+        <a href={`${base}case-modu`} class="project-brief">
+          <span class="brief-kicker">Logic · React Prototype</span>
+          <h3>modu · 모두의 시간</h3>
+          <p class="brief-summary">모두의 답변을 기다리지 않아도 회의가 정해질 수 있을까? 이의가 있을 때만 조율하는 흐름을 설계하고, 팀원별 시점에서 확인할 수 있게 구현했습니다.</p>
+          <span class="brief-link">프로젝트 보기 <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href={`${base}case-modu#design-system`} class="project-brief">
+          <span class="brief-kicker">UI System · Implementation Rule</span>
+          <h3>modu 디자인 시스템</h3>
+          <p class="brief-summary">modu의 색상, 간격, 상태 표현을 하나의 기준으로 정리했습니다. 화면이 늘어나도 같은 규칙으로 구현하고 확인할 수 있도록 토큰과 컴포넌트를 연결했습니다.</p>
+          <span class="brief-link">디자인 시스템 보기 <span aria-hidden="true">→</span></span>
         </a>
       </div>
     </section>
