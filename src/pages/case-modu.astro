@@ -28,6 +28,7 @@ const base = import.meta.env.BASE_URL;
       <div class="link-row">
         <a href="https://github.com/RunaUXLabs/modu" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
         <a href="https://runauxlabs.github.io/modu/" class="btn btn-secondary" target="_blank" rel="noopener">라이브 데모</a>
+        <a href="https://runauxlabs.github.io/modu-design-system/" class="btn btn-secondary" target="_blank" rel="noopener">Storybook</a>
       </div>
     </header>
 
@@ -63,21 +64,27 @@ const base = import.meta.env.BASE_URL;
 
     <section class="section" id="design-system">
       <h2>디자인 시스템</h2>
-      <p>modu는 화면 수가 많지 않은 프로토타입이지만, 상태가 계속 바뀌는 서비스라 화면 규칙이 쉽게 흔들릴 수 있었습니다. 그래서 디자인 시스템을 별도 산출물이 아니라 구현 품질을 유지하기 위한 기준으로 잡았습니다.</p>
+      <p>같은 일정 카드가 잠정 확정 화면, 조율 화면, 응답 시트에 반복해서 등장합니다. 화면마다 따로 만들면 표현과 동작이 달라질 수 있어, 공통 UI를 분리하고 각 화면에서 필요한 상태와 행동을 연결하도록 구성했습니다. 서비스와 Storybook은 같은 컴포넌트 소스를 사용합니다.</p>
+      <div class="link-row">
+        <a href="https://runauxlabs.github.io/modu-design-system/" class="btn btn-primary" target="_blank" rel="noopener">Storybook 보기</a>
+        <a href="https://github.com/RunaUXLabs/modu/tree/main/docs/design-system" class="btn btn-secondary" target="_blank" rel="noopener">설계 가이드 읽기</a>
+      </div>
       <div class="system-grid">
         <div>
-          <span>토큰 단일 출처</span>
-          <p>색상, 간격, 반경, 타이포그래피 기준을 CSS 토큰으로 두고 화면에서 반복 사용했습니다.</p>
+          <span>공통 기준과 컴포넌트</span>
+          <p>색상, 타이포그래피, 간격, 모션 등의 공통 값을 CSS 토큰으로 관리합니다. 버튼·칩 같은 기본 UI와 일정 카드·응답 현황표 같은 조합 UI를 나누어 재사용했습니다.</p>
         </div>
         <div>
-          <span>상태 표현</span>
-          <p>응답 전, 잠정 확정, 이의 제기, 조율 중처럼 흐름의 상태가 UI에서 구분되도록 기준을 세웠습니다.</p>
+          <span>개인의 선택과 팀의 현황</span>
+          <p>일정 카드의 색 칩은 나의 응답을, 게이지 길이는 팀의 응답 분포를 나타냅니다. 개인의 선택과 집단의 추세를 혼동하지 않도록 표현 방식을 나눴습니다.</p>
         </div>
         <div>
-          <span>접근성과 검증</span>
-          <p>4px 그리드, Pretendard, WCAG AA 대비, focus-visible 포커스 기준을 적용해 구현 단계에서 확인했습니다.</p>
+          <span>상태에서 서비스 흐름까지</span>
+          <p>Storybook에서 토큰, 기본·조합 컴포넌트, 화면 패턴을 살펴볼 수 있습니다. 실제 서비스 화면도 연결해 사용자 시점과 시간을 바꾸며 응답·확정·조율 실패 후의 흐름을 확인합니다.</p>
         </div>
       </div>
+      <p>접근성을 고려해 경고 배경과 텍스트 색을 구분하고, 키보드 포커스 표시와 응답 선택의 키보드 조작을 제공했습니다. 공통 컴포넌트와 서비스 시나리오 테스트를 마련했으며, 전체 화면의 접근성 검토와 일부 직접 지정된 디자인 값의 토큰 정리는 남아 있습니다.</p>
+      <p>현재는 브라우저 안에서 상태 전환을 확인하는 프로토타입입니다. 캘린더·회의룸·외부 알림은 샘플 데이터로 재현하며, 실제 서비스와 연동하지 않습니다.</p>
     </section>
 
     <hr class="rule" />
