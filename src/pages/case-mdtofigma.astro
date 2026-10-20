@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 ---
 <Base
   title="MD to Figma — 마크다운 ⇄ Figma 디자인 시스템 엔진 | Runa UX Labs"
-  description="디자인 시스템 문서와 Figma 변수·스타일을 양방향으로 연결하는 플러그인. 사용자 지정 모드와 토큰 간 참조를 보존하며 반복 작업을 줄입니다."
+  description="디자인 시스템 문서와 Figma 변수·스타일을 양방향으로 연결하는 플러그인. 자료를 입력 형식으로 정리하는 Figma Agent 스킬까지 함께 제작했습니다."
   current="work"
 >
   <div class="wrap">
@@ -22,12 +22,13 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="meta-item">
           <span class="meta-label">버전</span>
-          <span class="meta-val">v2.1.0 · MIT License</span>
+          <span class="meta-val">v2.1.2 · MIT License</span>
         </div>
       </div>
       <div class="link-row">
         <a href="https://github.com/RunaUXLabs/md-to-figma" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.figma.com/community/plugin/1631661911083855755" class="btn btn-secondary" target="_blank" rel="noopener">Figma 커뮤니티</a>
+        <a href="https://www.figma.com/community/skill/142125/md-to-figma" class="btn btn-secondary" target="_blank" rel="noopener">Figma Agent 스킬</a>
       </div>
     </header>
 
@@ -44,7 +45,7 @@ const base = import.meta.env.BASE_URL;
       </div>
       <div class="brief-block">
         <span>구현과 공개</span>
-        <p>문서와 Figma 사이의 생성·추출·재등록 흐름을 구현하고 Figma Community에 공개했습니다. v2.1.0에서는 다중 모드 보존과 효과·가이드·모션 스타일로 지원 범위를 넓혔습니다.</p>
+        <p>문서와 Figma 사이의 생성·추출·재등록 흐름을 구현하고 Figma Community에 공개했습니다. 이후 입력 문서를 준비하는 Figma Agent 스킬을 제작하고, 플러그인에서 바로 찾을 수 있도록 연결했습니다.</p>
       </div>
     </section>
 
@@ -70,7 +71,7 @@ const base = import.meta.env.BASE_URL;
         <li><strong>선택형 모션:</strong> 모션 변수와 모션 스타일을 각각 선택할 수 있도록 나눴습니다. API가 지원되지 않는 환경에서는 QA로 안내합니다.</li>
         <li><strong>AI 작업 흐름:</strong> 입력 템플릿에는 변환 규칙과 데이터 형식을 남기고, 상세 작업 안내와 상황별 프롬프트는 별도 가이드로 정리했습니다.</li>
       </ul>
-      <p>릴리스 검증에서는 변수 21개·스타일 19개의 통합 샘플을 실제 Figma에 등록한 뒤, 문서 추출 → 새 파일 이식 → 같은 파일 재등록까지 확인했습니다. 재등록 시 새 항목이 추가되지 않는 것을 확인했고 자동 테스트 9개를 통과했습니다. 베타 효과와 모션의 지원 범위는 Figma 실행 환경에 따라 달라집니다.</p>
+      <p>v2.1.0 릴리스 검증에서는 변수 21개·스타일 19개의 통합 샘플을 실제 Figma에 등록한 뒤, 문서 추출 → 새 파일 이식 → 같은 파일 재등록까지 확인했습니다. 재등록 시 새 항목이 추가되지 않는 것을 확인했습니다. 베타 효과와 모션의 지원 범위는 Figma 실행 환경에 따라 달라집니다.</p>
       <div class="link-row">
         <a href="https://github.com/RunaUXLabs/md-to-figma/releases/tag/v2.1.0" class="btn btn-secondary" target="_blank" rel="noopener">v2.1.0 릴리스 노트</a>
       </div>
@@ -79,8 +80,21 @@ const base = import.meta.env.BASE_URL;
     <hr class="rule" />
 
     <section class="section">
+      <h2>입력 문서를 준비하는 과정까지</h2>
+      <p>플러그인을 실행하려면 먼저 디자인 자료를 정해진 Markdown 형식으로 정리해야 합니다. 이 준비 과정도 덜 반복하도록, 기존 Export 문서나 디자인 자료를 입력 형식에 맞게 정리하는 MD to Figma Assistant 스킬을 만들었습니다. 플러그인의 AI 스킬 버튼에서 공개 페이지로 바로 이동할 수 있습니다.</p>
+      <p>스킬이 변경 내용을 정리하면 사용자는 완성된 문서와 필요한 변수·스타일 항목을 확인한 뒤 플러그인에 등록합니다. 이후 QA 로그와 실제 값·모드·참조·바인딩을 확인합니다. 문서 작성은 AI가 돕고, 대상 파일과 적용 결과는 사용자가 확인하도록 역할을 나눴습니다.</p>
+      <p>v2.1.2에서는 스킬 호출 이름을 제품명과 같은 <code>md-to-figma</code>로 통일하고 플러그인 안내와 다운로드 가이드도 맞췄습니다. 변수·스타일 동기화와 문서 형식은 유지했습니다. 릴리스 기준으로 기존 등록·추출 테스트와 AI 패키지 검사를 합친 16개 자동 검사를 통과했습니다.</p>
+      <div class="link-row">
+        <a href="https://www.figma.com/community/skill/142125/md-to-figma" class="btn btn-primary" target="_blank" rel="noopener">MD to Figma Assistant</a>
+        <a href="https://github.com/RunaUXLabs/md-to-figma/releases/tag/v2.1.2" class="btn btn-secondary" target="_blank" rel="noopener">v2.1.2 릴리스 노트</a>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="section">
       <h2>이 작업이 보여주는 것</h2>
-      <p>이 프로젝트는 플러그인 자체보다, 반복되는 디자인 판단을 도구로 바꾸는 방식에 가깝습니다. 화면 규칙을 문서로만 남기지 않고 실제 작업 환경으로 옮기며, 다시 추출해 검토할 수 있는 흐름을 만들었습니다.</p>
+      <p>디자인 규칙을 정리하고 Figma로 옮긴 뒤, 다시 꺼내 검토하는 흐름을 만들었습니다. 업데이트하면서 등록 기능뿐 아니라 사용자가 자료를 준비하고 결과를 확인하는 과정도 함께 다듬고 있습니다.</p>
     </section>
 
     <hr class="rule" />

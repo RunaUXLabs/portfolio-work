@@ -4,6 +4,7 @@
   --half: 14px;
   --edge: clamp(20px, 5vw, 72px);
   --measure: 57ch;
+  --subpage-title-size: 48px;
 }
 html {
   scroll-behavior: smooth;
@@ -17,6 +18,8 @@ body {
   margin: 0;
   font-family: "Pretendard Variable", var(--font-body);
   text-wrap: pretty;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
   background: radial-gradient(1200px 720px at 82% -160px, color-mix(in srgb, var(--color-accent-900) 75%, transparent), transparent 60%), radial-gradient(1100px 800px at -10% 100%, color-mix(in srgb, black 30%, transparent), transparent 55%), var(--color-bg);
 }
 a {
@@ -30,6 +33,10 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--edge);
+}
+
+.wrap :where(section, article, header, footer, div, a) {
+  min-width: 0;
 }
 
 /* Nav */
@@ -98,10 +105,21 @@ a:hover {
 .page-title {
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: var(--subpage-title-size);
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-wrap: balance;
   margin: 0;
+}
+@media (max-width: 880px) {
+  :root {
+    --subpage-title-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --subpage-title-size: 28px;
+  }
 }
 .page-sub {
   font-size: 16px;

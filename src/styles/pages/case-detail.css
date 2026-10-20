@@ -5,9 +5,10 @@
 .case-title {
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  font-size: clamp(32px, 4.5vw, 56px);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-size: var(--subpage-title-size);
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-wrap: balance;
   margin: 0;
 }
 .case-overview {

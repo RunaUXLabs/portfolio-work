@@ -26,9 +26,6 @@
   margin: 0;
   margin-left: -0.06em;
 }
-.display .line {
-  display: block;
-}
 .hero .sub {
   font-size: 15px;
   line-height: var(--leading);
