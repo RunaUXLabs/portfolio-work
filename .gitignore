@@ -19,3 +19,8 @@ public/uploads/ProblemDefinition/
 
 # 강사용 교안 deck — 빌더 포폴 배포에서 제외(로컬 파일은 유지)
 public/uploads/deck-problem-definition/
+
+# 로컬 검토 자료 및 구직 문서
+/.taste-skill/
+/career-docs/
+/job-watch/
