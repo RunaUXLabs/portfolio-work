@@ -198,11 +198,12 @@
 .skill-col h3 {
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  font-size: 15px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin: 0 0 8px;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 12px;
+  word-break: keep-all;
 }
 .skill-col p {
   font-size: 14px;
@@ -210,6 +211,12 @@
   color: color-mix(in srgb, var(--color-text) 78%, transparent);
   margin: 0;
   word-break: keep-all;
+}
+.skill-col .skill-keyword {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin: 0 0 10px;
 }
 @media (max-width: 720px) {
   .skill-grid {
