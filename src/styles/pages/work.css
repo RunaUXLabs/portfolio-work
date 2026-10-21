@@ -73,6 +73,11 @@
   margin: 0;
   word-break: keep-all;
 }
+.project-intro .link-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 .project-brief-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
