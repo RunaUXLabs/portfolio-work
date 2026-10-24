@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 ---
 <Base
   title="MD to Figma — 마크다운 ⇄ Figma 디자인 시스템 엔진 | Runa UX Labs"
-  description="디자인 시스템 문서와 Figma 변수·스타일을 양방향으로 연결하는 플러그인. 자료를 입력 형식으로 정리하는 Figma Agent 스킬까지 함께 제작했습니다."
+  description="디자인 시스템 문서와 Figma 변수·스타일을 양방향으로 연결하는 플러그인. Figma Agent 스킬과 5개 언어의 UI·처리 결과·오류 안내로 사용 과정을 확장했습니다."
   current="work"
 >
   <div class="wrap">
@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="meta-item">
           <span class="meta-label">버전</span>
-          <span class="meta-val">v2.1.2 · MIT License</span>
+          <span class="meta-val">v2.2.0 · MIT License</span>
         </div>
       </div>
       <div class="link-row">
@@ -46,7 +46,7 @@ const base = import.meta.env.BASE_URL;
       </div>
       <div class="brief-block">
         <span>구현과 공개</span>
-        <p>문서와 Figma 사이의 생성·추출·재등록 흐름을 구현하고 Figma Community에 공개했습니다. 이후 입력 문서를 준비하는 Figma Agent 스킬을 제작하고, 플러그인에서 바로 찾을 수 있도록 연결했습니다.</p>
+        <p>문서와 Figma 사이의 생성·추출·재등록 흐름을 구현하고 Figma Community에 공개했습니다. 이후 입력 문서를 준비하는 Figma Agent 스킬을 연결하고, UI와 처리 결과·오류 안내를 5개 언어로 확장했습니다.</p>
       </div>
     </section>
 
@@ -94,8 +94,25 @@ const base = import.meta.env.BASE_URL;
     <hr class="rule" />
 
     <section class="section">
+      <h2>익숙한 용어와 이해할 수 있는 안내</h2>
+      <p>v2.2.0에서는 한국어·영어·일본어·중국어 간체·스페인어를 지원했습니다. Figma에서 사용하는 Colors, Spacing, Typography 등의 옵션명은 영어로 유지하고, 각 옵션의 설명과 진행 상태, 처리 결과, 오류 안내는 선택한 언어로 제공합니다.</p>
+      <ul>
+        <li><strong>자동 선택과 직접 변경:</strong> 처음 실행할 때 실행 환경의 선호 언어를 따르고, 지원하는 언어가 없으면 영어로 표시합니다. 사용자가 직접 선택한 언어는 다음 실행에도 유지합니다.</li>
+        <li><strong>작업을 이어가는 언어 전환:</strong> 언어를 바꿔도 입력한 Markdown과 선택 옵션을 유지합니다. 이미 표시된 처리 결과와 복사할 보고서도 선택한 언어에 맞춰 갱신합니다.</li>
+        <li><strong>필요한 위치에서 설명:</strong> 옵션명에 마우스를 올리거나 체크박스에 키보드 포커스를 두면 해당 언어의 툴팁을 표시합니다. Escape 키로 설명을 닫을 수 있습니다.</li>
+        <li><strong>번역 범위의 구분:</strong> 사용자 정의 이름과 값, Markdown 문법, 외부 오류 원문은 보존합니다. 원인을 알 수 없는 오류에는 원인을 추측하지 않고 상황에 맞는 안내를 덧붙입니다.</li>
+      </ul>
+      <p>번역 API나 네트워크 요청 없이 동작하도록 구현했습니다. 릴리스 검증에서는 등록·추출 회귀 검사와 언어 감지·저장 등을 포함한 자동 검사 23개를 통과했고, 브라우저에서 5개 언어의 화면과 키보드 접근, 보고서 복사, 입력 유지 동작을 확인한 뒤 Figma에서도 UI 동작을 확인했습니다.</p>
+      <div class="link-row">
+        <a href="https://github.com/RunaUXLabs/md-to-figma/releases/tag/v2.2.0" class="btn btn-secondary" target="_blank" rel="noopener">v2.2.0 릴리스 노트</a>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="section">
       <h2>이 작업이 보여주는 것</h2>
-      <p>디자인 규칙을 정리하고 Figma로 옮긴 뒤, 다시 꺼내 검토하는 흐름을 만들었습니다. 업데이트하면서 등록 기능뿐 아니라 사용자가 자료를 준비하고 결과를 확인하는 과정도 함께 다듬고 있습니다.</p>
+      <p>디자인 규칙을 정리하고 Figma로 옮긴 뒤, 다시 꺼내 검토하는 흐름을 만들었습니다. 공개 이후에도 자료 준비부터 결과 확인까지 다듬고, 사용자가 익숙한 언어로 도구를 이해하고 작업을 이어갈 수 있도록 개선하고 있습니다.</p>
     </section>
 
     <hr class="rule" />
