@@ -19,7 +19,7 @@
 }
 .fit-no {
   margin: 0 0 calc(1.5 * var(--leading));
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1;
   letter-spacing: 0.08em;
   color: var(--color-accent);
@@ -36,7 +36,7 @@
 }
 .fit-item p:not(.fit-no) {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: color-mix(in srgb, var(--color-text) 74%, transparent);
   word-break: keep-all;
@@ -67,7 +67,7 @@
   margin: 0;
 }
 .project-intro p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
   margin: 0;
@@ -111,7 +111,7 @@
   outline-offset: 4px;
 }
 .brief-kicker {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -126,7 +126,7 @@
   margin: 0;
 }
 .brief-summary {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   color: color-mix(in srgb, var(--color-text) 76%, transparent);
   margin: 0;
@@ -140,7 +140,7 @@
   margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-accent);
 }
@@ -180,7 +180,7 @@
   }
 }
 .case-card .ck {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -194,7 +194,7 @@
   text-wrap: balance;
 }
 .case-card .cb {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
   margin: 0;
@@ -226,17 +226,17 @@
   margin: 0 0 var(--half);
 }
 .fp-intro {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
-  color: color-mix(in srgb, var(--color-text) 68%, transparent);
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
   margin: 0 0 calc(1.5 * var(--leading));
   /* max-width: var(--measure); */
   /* max-width: 84ch; */
   word-break: keep-all;
 }
 .fp-src {
-  color: color-mix(in srgb, var(--color-text) 42%, transparent);
-  font-size: 13px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+  font-size: 14px;
 }
 .fp-cols {
   display: grid;
@@ -265,7 +265,7 @@
   color: var(--color-text);
 }
 .evidence-item span {
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
   word-break: keep-all;
@@ -276,7 +276,7 @@
   gap: 8px;
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.01em;
   color: var(--color-accent);
   margin: 0 0 var(--half);
@@ -285,8 +285,8 @@
 }
 .fp-group h3 span {
   font-family: var(--font-body);
-  font-size: 12px;
-  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+  font-size: 13px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
   font-feature-settings: "tnum" 1;
 }
 .fp-list {
@@ -303,14 +303,14 @@
   border-bottom: 1px solid color-mix(in srgb, var(--color-text) 7%, transparent);
 }
 .fp-name {
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.45;
   color: color-mix(in srgb, var(--color-text) 84%, transparent);
 }
 .fp-year {
   flex: none;
-  font-size: 12px;
-  color: color-mix(in srgb, var(--color-text) 42%, transparent);
+  font-size: 13px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
   font-feature-settings: "tnum" 1;
 }
 @media (max-width: 720px) {

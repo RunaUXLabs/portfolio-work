@@ -33,7 +33,7 @@
   color: var(--color-text);
 }
 .narrative p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: var(--leading);
   color: color-mix(in srgb, var(--color-text) 78%, transparent);
   margin: 0;
@@ -64,7 +64,7 @@
 }
 .axis-label {
   margin: 0 0 var(--leading);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -86,7 +86,7 @@
 .axis-main p:not(.axis-label),
 .axis-side p:not(.axis-label) {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: color-mix(in srgb, var(--color-text) 74%, transparent);
   word-break: keep-all;
@@ -127,7 +127,7 @@
   box-shadow: 0 0 0 4px var(--color-bg);
 }
 .tl-period {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.04em;
   color: var(--color-accent);
   margin: 0 0 4px;
@@ -141,7 +141,7 @@
   margin: 0 0 6px;
 }
 .tl-desc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
   margin: 0;
@@ -159,7 +159,7 @@
 .edu-block h4 {
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -171,7 +171,7 @@
   margin: 0;
 }
 .edu-list li {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   padding-left: 18px;
   position: relative;

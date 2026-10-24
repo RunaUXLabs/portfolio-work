@@ -30,13 +30,13 @@
   gap: 4px;
 }
 .meta-label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
 }
 .meta-val {
-  font-size: 14px;
+  font-size: 15px;
   color: color-mix(in srgb, var(--color-text) 80%, transparent);
 }
 .link-row {
@@ -67,7 +67,7 @@
 .system-grid span {
   display: block;
   margin: 0 0 var(--half);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -75,7 +75,7 @@
 }
 .brief-block p {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: color-mix(in srgb, var(--color-text) 74%, transparent);
   word-break: keep-all;
@@ -88,7 +88,7 @@
   margin: 0 0 var(--leading);
 }
 .section p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: var(--leading);
   color: color-mix(in srgb, var(--color-text) 78%, transparent);
   margin: 0 0 var(--half);
@@ -100,7 +100,7 @@
   margin: var(--half) 0 0;
 }
 .section li {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   color: color-mix(in srgb, var(--color-text) 78%, transparent);
   margin-bottom: 6px;
@@ -131,7 +131,7 @@
 }
 .system-grid p {
   margin: 0;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.65;
   color: color-mix(in srgb, var(--color-text) 72%, transparent);
   word-break: keep-all;
